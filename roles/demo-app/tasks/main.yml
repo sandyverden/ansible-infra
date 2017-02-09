@@ -1,2 +1,7 @@
 ---
-# tasks file for demo-app
+- name: install web components
+  apt: name={{item}} state=present update_cache=yes
+  with_items:
+    - python-pip
+    - python-virtualenv
+    - python-mysqldb
