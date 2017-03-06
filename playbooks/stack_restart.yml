@@ -14,7 +14,7 @@
     - service: name=apache2 state=stopped
     - wait_for: port=80 state=stopped
 
-# Restart mysql
+# Restart mysql service
 - hosts: database
   become: true
   tasks:
