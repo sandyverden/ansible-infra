@@ -23,6 +23,7 @@
 
 - debug: var=active.stdout_lines
 - debug: var=db_name
+- debug: var=vars
 
 - name: de-activate sites
   file: path=/etc/nginx/sites-enabled/"{{ item }}" state=absent
