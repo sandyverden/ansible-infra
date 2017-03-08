@@ -1,6 +1,6 @@
 ---
 - name: install tools
-  apt: name="{{ item }}" state=present update_cache=yes
+  apt: name="{{ item }}" state=present
   with_items:
     - python-httplib2
 
@@ -29,4 +29,3 @@
 
 - name: ensure nginx started
   service: name=nginx state=started enabled=yes
-
